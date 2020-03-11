@@ -14,3 +14,42 @@ p {
 .hidden {
     display: none;
 }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.block-wrapper {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.18);
+    background-color: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: .25rem;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#containerTable,
+#boxTable {
+    background-color: #eeeeee;
+}
+
+.table thead th {
+    vertical-align: top;
+}
+
+.mainSection .input-block.editable .form-control {
+    border: none;
+    border-left: 3px solid #007bff;
+    border-radius: 0;
+    min-width: 100px;
+}
+
+#boxTable td[data-boxdesign] {
+    width: 250px;
+}
+
+#boxTable option.enable {
+    color: forestgreen;
+}

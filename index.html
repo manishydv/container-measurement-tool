@@ -7,27 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- <link rel='stylesheet' href='page-css/tooltipster.css'> -->
+    <link rel='stylesheet' href='page-css/tooltipster.css'>
     <link rel="stylesheet" href="page-css/index.css">
     <style>
         #item-container {
-            border: solid 1px #007bff;
+            border: solid 1px red;
             position: relative;
         }
         
         .item {
             border: solid 1px #000;
             float: left;
-        }
-        
-        .design-name-lbl,
-        .design-qty-lbl,
-        .design-free-lbl {
-            padding: 5px;
-            display: block;
         }
     </style>
     <title>Kaylee - Container Measurement</title>
@@ -44,57 +36,59 @@
             </div>
             <div class="block-wrapper">
                 <div class="mainSection mt-3">
-                    <form id="cmForm">
-                        <h5 class="title">Container size</h5>
-                        <div class="table-responsive-md">
-                            <table class="table table-sm" id="containerTable">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Length<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Enter length of container."></i></th>
-                                        <th scope="col">Width<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Enter width of container"></i></th>
-                                        <th scope="col">Height<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Enter height of container"></i></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="containerSizeInput">
-                                        <td data-containerLength>
-                                            <div class="containerLength-block input-block editable">
-                                                <input type="text" name="containerLength-a1" class="form-control form-control-sm de-input containerLength" data-decimal value="40">
-                                            </div>
-                                        </td>
-                                        <td data-containerWidth>
-                                            <div class="containerWidth-block input-block editable">
-                                                <input type="text" name="containerWidth-a1" class="form-control form-control-sm de-input containerWidth" data-decimal value="8">
-                                            </div>
-                                        </td>
-                                        <td data-containerHeight>
-                                            <div class="containerHeight-block input-block editable">
-                                                <input type="text" name="containerHeight-a1" class="form-control form-control-sm de-input containerHeight" data-decimal value="8.5">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <h5 class="title">Box size</h5>
-                        <div class="table-responsive-md">
-                            <table class="table table-sm" id="boxTable">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Box Design<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="Select one of box size from dropdown menu."></i></th>
-                                        <th scope="col">Quantity<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="Quantity of selected box design"></i></th>
-                                        <th scope="col">Available Qty<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="Available Quantity Space"></i></th>
-                                        <th scope="col">Length<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="This input denote length of selected box design."></i></th>
-                                        <th scope="col">Width<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="This input denote width of selected box design."></i></th>
-                                        <th scope="col">Height<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="This input denote height of selected box design."></i></th>
-                                        <th scope="col" class="text-center">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="BoxSizeInput" data-boxId="bx-1582884593570">
-                                        <td data-boxDesign>
-                                            <div class="boxDesign-block input-block">
-                                                <select class="custom-select custom-select-sm de-input boxdesignDropdown" name="boxDesign-a1">
+                    <form id="containerForm">
+                        <form id="debteliminatorForm">
+                            <h5 class="title">Container size</h5>
+                            <div class="table-responsive-md">
+                                <table class="table table-sm" id="containerTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Length<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Enter length of container."></i></th>
+                                            <th scope="col">Width<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Enter width of container"></i></th>
+                                            <th scope="col">Height<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Enter height of container"></i></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="containerSizeInput">
+                                            <td data-containerLength>
+                                                <div class="containerLength-block input-block editable">
+                                                    <input type="text" name="containerLength" class="form-control form-control-sm cm-input containerLength" data-decimal value="20" required>
+                                                </div>
+                                            </td>
+                                            <td data-containerWidth>
+                                                <div class="containerWidth-block input-block editable">
+                                                    <input type="text" name="containerWidth" class="form-control form-control-sm cm-input containerWidth" data-decimal value="5" required>
+                                                </div>
+                                            </td>
+                                            <td data-containerHeight>
+                                                <div class="containerHeight-block input-block editable">
+                                                    <input type="text" name="containerHeight" class="form-control form-control-sm cm-input containerHeight" data-decimal value="10" required>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                        <form id="boxInputForm">
+                            <h5 class="title">Box size</h5>
+                            <div class="table-responsive-md">
+                                <table class="table table-sm" id="boxTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Box Design<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="Select one of box size from dropdown menu."></i></th>
+                                            <th scope="col">Quantity<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="Quantity of selected box design"></i></th>
+                                            <th scope="col">Length<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="This input denote length of selected box design."></i></th>
+                                            <th scope="col">Width<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="This input denote width of selected box design."></i></th>
+                                            <th scope="col">Height<i class="fa fa-question-circle text-primary" data-toggle="tooltip" data-placement="top" data-original-title="This input denote height of selected box design."></i></th>
+                                            <th scope="col" class="text-center">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="BoxSizeInput" data-boxId="bx-1582884593570">
+                                            <td data-boxDesign>
+                                                <div class="boxDesign-block input-block">
+                                                    <select class="custom-select custom-select-sm cm-input1 boxdesignDropdown" name="boxDesign" required>
                                                     <option value="18'14.5G STRUT HANGER" class="enable" selected>18'14.5G STRUT HANGER</option>
                                                     <option value="16'13G SUIT" class="enable">16'13G SUIT</option>
                                                     <option value="16'14.5G CAPE WITHOUT PAPER" class="enable">16'14.5G CAPE WITHOUT PAPER</option>
@@ -105,72 +99,444 @@
                                                     <option value="18'13G GOLD CAPE PLAIN/PRINT" class="enable">18'13G GOLD CAPE PLAIN/PRINT</option>
                                                     <option value="18'14.5G CAPE PLAIN/PRINT" class="enable">18'14.5G CAPE PLAIN/PRINT</option>
                                                 </select>
-                                            </div>
-                                        </td>
-                                        <td data-boxQuantity>
-                                            <div class="boxQuantity-block input-block editable">
-                                                <input type="number" name="boxQuantity-a1" class="form-control de-input form-control-sm boxQuantity" value="2">
-                                            </div>
-                                        </td>
-                                        <td data-boxAvailableQuantity>
-                                            <div class="boxAvailableQuantity-block input-block">
-                                                <input type="number" name="boxAvailableQuantity-a1" class="form-control  form-control-sm boxAvailableQuantity" value="0" readonly>
-                                            </div>
-                                        </td>
-                                        <td data-boxLength>
-                                            <div class="boxLength-block input-block">
-                                                <input type="number" name="boxLength-a1" class="form-control  form-control-sm boxLength" value="23" readonly>
-                                            </div>
-                                        </td>
-                                        <td data-boxWidth>
-                                            <div class="boxWidth-block input-block">
-                                                <input type="number" name="boxWidth-a1" class="form-control  form-control-sm boxWidth" value="17" readonly>
-                                            </div>
-                                        </td>
-                                        <td data-boxHeight>
-                                            <div class="boxHeight-block input-block">
-                                                <input type="number" name="boxHeight-a1" class="form-control  form-control-sm boxHeight" value="13" readonly>
-                                            </div>
-                                        </td>
-                                        <td data-action>
-                                            <div class="action-control">
-                                                <a class="btn btn-primary btn-sm deletedboxbtn" href="javascript:void(0)"><i class="far fa-trash-alt"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                                </div>
+                                            </td>
+                                            <td data-boxQuantity>
+                                                <div class="boxQuantity-block input-block editable">
+                                                    <input type="number" name="boxQuantity-a1" class="form-control cm-input form-control-sm boxQuantity" min="1" value="2" required>
+                                                </div>
+                                            </td>
+                                            <td data-boxLength>
+                                                <div class="boxLength-block input-block">
+                                                    <input type="number" class="form-control  form-control-sm boxLength" min="1" value="23" readonly>
+                                                </div>
+                                            </td>
+                                            <td data-boxWidth>
+                                                <div class="boxWidth-block input-block">
+                                                    <input type="number" class="form-control  form-control-sm boxWidth" min="1" value="17" readonly>
+                                                </div>
+                                            </td>
+                                            <td data-boxHeight>
+                                                <div class="boxHeight-block input-block">
+                                                    <input type="number" class="form-control  form-control-sm boxHeight" min="1" value="13" readonly>
+                                                </div>
+                                            </td>
+                                            <td data-action>
+                                                <div class="action-control">
+                                                    <a class="btn btn-primary btn-sm deletedboxbtn" href="javascript:void(0)"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                        <div class="row addBox-wrapper">
+                            <div class="col-md-12 my-3">
+                                <a href="javascript:void(0)" id="addBox"><i class="fas fa-plus"></i> Add another Box</a>
+                            </div>
                         </div>
-                    </form>
-                    <div class="row addBox-wrapper">
-                        <div class="col-md-12 my-3">
-                            <a href="javascript:void(0)" id="addBox"><i class="fas fa-plus"></i> Add another Box</a>
+                        <div class="justify-content-end row mt-3">
+                            <div class="col-sm-12 text-right">
+                                <button id="btnGenrate" class="btn btn-secondary btn-sm" type="button">Genrate now</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="justify-content-end row mt-3">
-                        <div class="col-sm-12 text-right">
-                            <button id="btnGenrate" class="btn btn-secondary btn-sm" type="button">Calculate</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <div class="block-wrapper">
-        <h3 class="title">Container Layout :</h3>
+        <h3 class="title">Output:-</h3>
         <div id="item-container"></div>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- validator -->
     <script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js'></script>
-    <!-- <script src="page-js/tooltipster.js"></script> -->
+    <script src="page-js/tooltipster.js"></script>
+    <script src="page-js/index.js"></script>
+    <script>
+        var boxList = [{
+            name: "18'14.5G STRUT HANGER",
+            category: 'Without Paper',
+            length: 23,
+            width: 17,
+            height: 13
+        }, {
+            name: "16'13G SUIT",
+            category: 'Without Paper',
+            length: 13,
+            width: 13,
+            height: 12
+        }, {
+            name: "16'14.5G CAPE WITHOUT PAPER",
+            category: 'Without Paper',
+            length: 13,
+            width: 13,
+            height: 9
+        }, {
+            name: "18'13G SHIRT",
+            category: 'Without Paper',
+            length: 15,
+            width: 15,
+            height: 11
+        }, {
+            name: "18'14.5G SHIRT",
+            category: 'Without Paper',
+            length: 15,
+            width: 15,
+            height: 8
+        }, {
+            name: "16'13G CAPE PLAIN/PRINT",
+            category: 'With Paper',
+            length: 13,
+            width: 13,
+            height: 16.5
+        }, {
+            name: "16'14.5G CAPE PLAIN/PRINT",
+            category: 'With Paper',
+            length: 13,
+            width: 13,
+            height: 12
+        }, {
+            name: "18'13G GOLD CAPE PLAIN/PRINT",
+            category: 'With Paper',
+            length: 15,
+            width: 15,
+            height: 18
+        }, {
+            name: "18'14.5G CAPE PLAIN/PRINT",
+            category: 'With Paper',
+            length: 15,
+            width: 15,
+            height: 12
+        }];
 
+
+        var possibleOptions = '';
+
+        function updateBoxDesignSelectOptionsList(tempSelectedBoxDesignList) {
+            var tempSelectedBoxDesignList = [];
+            $("#boxTable select.boxdesignDropdown").each(function() {
+                if ($(this).val() != undefined && $(this).val() != "") {
+                    tempSelectedBoxDesignList.push($(this).val());
+                }
+            });
+            possibleOptions = '';
+            boxList.forEach((el, index) => {
+                if (tempSelectedBoxDesignList.indexOf(el.name) == -1) {
+                    possibleOptions += `<option value="${el.name}" class="enable">${el.name}</option>`;
+                } else {
+                    possibleOptions += `<option value="${el.name}" disabled>${el.name}</option>`;
+                }
+            });
+            $("#boxTable select.boxdesignDropdown").each(function() {
+                let newOptions;
+                if ($(this).val() != undefined && $(this).val() != '') {
+                    newOptions = `<option value="${$(this).val()}" selected>${$(this).val()}</option>${possibleOptions}`;
+                    // update other data
+                    boxList.forEach((el, index) => {
+                        if ($(this).val() == el.name) {
+                            let $curr_TR = $(this).closest('tr.BoxSizeInput');
+                            $curr_TR.find('input.boxLength').val(el.length);
+                            $curr_TR.find('input.boxWidth').val(el.width);
+                            $curr_TR.find('input.boxHeight').val(el.height);
+                        }
+                    });
+                } else {
+                    newOptions = `<option disabled selected value> -- select an option -- </option>${possibleOptions}`;
+                    let $curr_TR = $(this).closest('tr.BoxSizeInput');
+                    $curr_TR.find('input .boxQuantity').val(0);
+                    $curr_TR.find('input .boxLength').val(0);
+                    $curr_TR.find('input .boxWidth').val(0);
+                    $curr_TR.find('input .boxHeight').val(0);
+                }
+                $(this).html(newOptions);
+            });
+        }
+
+
+        $(document).on('change', '#boxTable select.boxdesignDropdown', function() {
+            updateBoxDesignSelectOptionsList();
+        });
+
+        // delete box
+        $(document).on('click', "#boxTable tbody .deletedboxbtn", function() {
+            $(this).closest('tr.BoxSizeInput').remove();
+            updateBoxDesignSelectOptionsList();
+        });
+
+        function addRowData(timeStamp) {
+            debugger;
+            let tempDataId = timeStamp + 1;
+            var templateStr = `<tr class="BoxSizeInput" data-boxid="bx-${tempDataId}"><td data-boxdesign>
+                        <div class="boxDesign-block input-block">
+                        <select class="custom-select custom-select-sm cm-input boxdesignDropdown" name="boxDesign${timeStamp}" required>
+                        <option disabled selected value> -- select an option -- </option>`;
+            boxList.forEach((el, index) => {
+                templateStr += `<option value="${el.name}" class="enable">${el.name}</option>`;
+            });
+            templateStr += `</select></div>
+                       </td><td data-boxquantity>
+                         <div class="boxQuantity-block input-block editable">
+                            <input type="number" name="boxQuantity-${timeStamp}" class="form-control form-control-sm cm-input boxQuantity" min="1" required>
+                         </div>
+                       </td>
+                    <td data-boxlength>
+                        <div class="boxLength-block input-block">
+                            <input type="number"  class="form-control form-control-sm boxLength" min="1"  readonly>
+                        </div>
+                    </td>
+                    <td data-boxwidth>
+                        <div class="boxWidth-block input-block">
+                            <input type="number" class="form-control form-control-sm boxWidth" min="1"  readonly="">
+                        </div>
+                    </td>
+                    <td data-boxheight>
+                        <div class="boxHeight-block input-block">
+                            <input type="number" class="form-control form-control-sm boxHeight" min="1" readonly="">
+                        </div>
+                    </td>
+                    <td data-action>
+                        <div class="action-control">
+                            <a class="btn btn-primary btn-sm deletedboxbtn" href="javascript:void(0)"><i class="far fa-trash-alt"></i></a>
+                        </div>
+                    </td>
+                </tr>`;
+            $("#boxTable tbody").append(templateStr);
+            $(`#boxTable tbody tr[data-boxid=bx-${tempDataId}] .cm-input`).tooltipster({
+                contentAsHTML: 'true',
+                animation: 'grow',
+                position: 'top',
+            });
+            updateBoxDesignSelectOptionsList();
+
+        }
+
+        //validate
+        $(document).on('keypress', 'input[data-decimal]', function(e) {
+            if (isNaN(this.value + "" + String.fromCharCode(e.charCode))) return false;
+        }).on("cut copy paste", function(e) {
+            e.preventDefault();
+        });
+
+        //custom only-decimal
+        $(document).on('blur', 'input[data-decimal]', function(e) {
+            var position = this.selectionStart - 1;
+            fixed = this.value.replace(/[^0-9\.]/g, ''); //remove all but number and .
+            if (fixed.charAt(0) === '.') //can't start with .
+                fixed = fixed.slice(1);
+            var pos = fixed.indexOf(".") + 1;
+            if (pos >= 0)
+                fixed = fixed.substr(0, pos) + fixed.slice(pos).replace('.', ''); //avoid more than one .
+            if (this.value !== fixed) {
+                this.value = fixed;
+                this.selectionStart = position;
+                this.selectionEnd = position;
+            }
+        });
+
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('#addBox').click(function(e) {
+                if ($("#boxTable tbody tr").length < boxList.length) {
+                    addRowData(Date.now());
+                } else {
+                    return e.preventDefault();
+                }
+            });
+
+            $(".cm-input").tooltipster({
+                contentAsHTML: 'true',
+                animation: 'grow',
+                position: 'top',
+            });
+
+            //form1
+            $("#containerForm").validate({
+                errorPlacement: function(error, element) {
+                    var ele = $(element);
+                    var err = $(error);
+                    var msg = err.text();
+                    if (msg != null && msg !== "") {
+                        ele.tooltipster('content', msg);
+                        ele.tooltipster('open');
+                    }
+                },
+                highlight: function(el, errorClass, validClass) {
+                    $(el).closest("div.input-block").addClass("error-item");
+                },
+                unhighlight: function(el, errorClass, validClass) {
+                    $(el).closest("div.input-block").removeClass("error-item");
+                    $(el).removeClass(errorClass).addClass(validClass).tooltipster('close');
+                },
+                rules: {
+                    containerLength: {
+                        required: true,
+                        min: 0
+                    },
+                    containerWidth: {
+                        required: true,
+                        min: 0
+                    },
+                    containerHeight: {
+                        required: true,
+                        min: 0
+                    }
+                },
+                messages: {
+                    containerLength: {
+                        required: "Required container length",
+                    },
+                    containerWidth: {
+                        required: "Required container width",
+                    },
+                    containerHeight: {
+                        required: "Required container height",
+                    }
+                },
+            });
+
+            //form2
+            $("#boxInputForm").validate({
+                errorPlacement: function(error, element) {
+                    var ele = $(element);
+                    var err = $(error);
+                    var msg = err.text();
+                    if (msg != null && msg !== "") {
+                        ele.tooltipster('content', msg);
+                        ele.tooltipster('open');
+                    }
+                },
+                highlight: function(el, errorClass, validClass) {
+                    $(el).closest("div.input-block").addClass("error-item");
+                },
+                unhighlight: function(el, errorClass, validClass) {
+                    $(el).closest("div.input-block").removeClass("error-item");
+                    $(el).removeClass(errorClass).addClass(validClass).tooltipster('close');
+                }
+            });
+
+            //form 1 validation
+            $.validator.addClassRules({
+                'boxdesignDropdown': {
+                    boxRequired: true,
+                },
+                'boxQuantity': {
+                    qtyRequired: true,
+                    qtyMin: 1
+                },
+            });
+
+            //custom method form1 required method
+            $.validator.addMethod("qtyRequired", $.validator.methods.required, "Required quantity");
+            $.validator.addMethod("boxRequired", $.validator.methods.required, "Please select box design.");
+            // required number
+            $.validator.addMethod('qtyMin', function(value, el, param) {
+                return this.optional(el) || value > param;
+            }, $.validator.format("The value should greater then {0}"));
+
+
+            $("#btnGenrate").click(function() {
+                if ($("#boxTable tbody tr").length > 0) {
+                    console.log("more one tr");
+                    if ($("#containerForm").valid() && $("#boxInputForm").valid()) {
+                        let $_container = $("#containerTable");
+                        let length = $_container.find('input.containerLength');
+                        let width = $_container.find('input.containerWidth');
+                        let height = $_container.find('input.containerHeight');
+                        genrateContainerMeasurementCalc(length, width, height)
+                    } else {
+                        console.log("form-1 invalid", $("#debteliminatorForm").valid())
+                        console.log("form-2 invalid", $("#boxInputForm").valid());
+                    }
+                } else {
+                    alert("Please provide box size data first.");
+                }
+            });
+
+            function genrateContainerMeasurementCalc(length, width, height) {
+                var scaling = 5;
+                var containerLength = 40 * 12 * scaling;
+                var containerWidth = 8 * 12 * scaling;
+                var containerHeight = 8.5 * 12 * scaling;
+                $('#item-container').width(containerWidth).height(containerLength);
+                var containerBoxList = [];
+                for (var i = 0; i < 30; i++) {
+                    var boxIndex = Math.floor(Math.random() * boxList.length);
+                    boxList[boxIndex].length = boxList[boxIndex].length;
+                    boxList[boxIndex].width = boxList[boxIndex].width;
+                    boxList[boxIndex].height = boxList[boxIndex].height;
+                    containerBoxList.push(boxList[boxIndex]);
+                }
+                for (var i = 0; i < containerBoxList.length; i++) {
+                    for (var j = i + 1; j < containerBoxList.length; j++) {
+                        if (containerBoxList[i].width * containerBoxList[i].length < containerBoxList[j].width * containerBoxList[j].length) {
+                            var temp = containerBoxList[i];
+                            containerBoxList[i] = containerBoxList[j];
+                            containerBoxList[j] = temp;
+                        }
+                    }
+                }
+                var left = 0;
+                var right = containerWidth;
+                var containerRowList = [];
+                var currentRow = [];
+
+                var isAlter = false;
+                for (var i = 0; i < containerBoxList.length; i++) {
+                    var width = containerBoxList[i].width * scaling;
+                    var length = containerBoxList[i].length * scaling;
+                    if (left + width > containerWidth || right - width < 0) {
+                        containerRowList.push(currentRow);
+                        currentRow = [];
+                        left = 0;
+                        right = containerWidth;
+                        isAlter = !isAlter;
+                    }
+                    var boxTop = 0;
+                    var currentBoxPosition = {
+                        top: boxTop,
+                        bottom: boxTop + length,
+                        left: left + 1,
+                        right: left + width - 1
+                    };
+                    if (isAlter) {
+                        currentBoxPosition.right = right - 1;
+                        currentBoxPosition.left = right - width + 1;
+                    }
+                    //debugger;
+                    for (var j = 0; j < containerRowList.length; j++) {
+                        var previourRow = containerRowList[j];
+                        for (var k = 0; k < previourRow.length; k++) {
+                            if ((currentBoxPosition.right >= previourRow[k].left && currentBoxPosition.right <= previourRow[k].right) ||
+                                (currentBoxPosition.left <= previourRow[k].right && currentBoxPosition.left >= previourRow[k].left) ||
+                                (currentBoxPosition.left >= previourRow[k].left && currentBoxPosition.right <= previourRow[k].right)) {
+                                if (boxTop < previourRow[k].bottom) {
+                                    boxTop = previourRow[k].bottom;
+                                }
+                            }
+                        }
+                    }
+                    boxTop = boxTop + 1;
+                    currentBoxPosition.top = boxTop;
+                    currentBoxPosition.bottom = boxTop + length - 1;
+                    currentRow.push(currentBoxPosition);
+                    var style = `width:${width}px;height:${length}px;top:${boxTop}px;left:${currentBoxPosition.left}px;position:absolute;`;
+                    var newItem = `<section class="item" style="${style}"></item>`;
+                    $('#item-container').append(newItem);
+                    left += width;
+                    right -= width;
+                }
+                console.log(containerRowList);
+            }
+        });
+    </script>
 </body>
 
 </html>
